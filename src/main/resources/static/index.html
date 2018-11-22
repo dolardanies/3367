@@ -28,11 +28,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     </head>
 
 
-    
+
     <body onload="app.init()">
         X:<input id="x" type="number"/>
         Y:<input id="y" type="number"/>        
-        <button onclick="app.publishPoint($('#x').val(),$('#y').val())">Send point</button>
+        <button onclick="app.publishPoint($('#x').val(), $('#y').val())">Send point</button>
+        ID:<input id="idTopic" type="number"/>
+        <button onclick="app.subscribeTo($('#idTopic').val())">Subscribe</button>
         <canvas id="canvas" width="1920" height="1080" style="cursor:crosshair"></canvas>
     </body>
 </html>
